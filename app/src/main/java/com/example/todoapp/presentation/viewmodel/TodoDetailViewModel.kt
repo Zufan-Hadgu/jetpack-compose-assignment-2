@@ -19,10 +19,9 @@ class TodoDetailViewModel(
 
     fun loadTodo(id: Int) {
         viewModelScope.launch {
-            println("Loading todo with ID: $id") // Debugging statement
+
             getTodosUseCase().collect { todos ->
                 val foundTodo = todos.find { it.id == id }
-                println("Found todo: $foundTodo") // Debugging statement
                 _todo.value = foundTodo
             }
         }

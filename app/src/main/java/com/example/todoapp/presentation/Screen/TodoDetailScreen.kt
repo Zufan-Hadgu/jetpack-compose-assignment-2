@@ -48,7 +48,7 @@ fun TodoDetailScreen(
             ) {
                 Text("ID: ${it.id}")
                 Text("Title: ${it.title}")
-                Text("Status: ${if (it.completed) "✅ Completed" else "⏳ Pending"}")
+                Text("Status: ${if (it.completed) "Completed" else "⏳ Pending"}")
             }
         }
     }
